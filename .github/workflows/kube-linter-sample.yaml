@@ -22,7 +22,7 @@ jobs:
           directory: k8s/
           format: sarif
           output-file: ../results/kube-linter.sarif
-          config: kubelinter-conf.yaml
+          config: kubelinter-config.yaml
         continue-on-error: true
 
       - name: Upload SARIF report files to GitHub
