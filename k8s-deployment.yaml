@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment                 
+metadata:
+  name: go-math         
+spec:
+  replicas: 1                  
+  selector:
+    matchLabels:
+      app: go-math  
+  template:                      
+    metadata:
+      labels:                    
+        app: go-math
+    spec:                        
+      containers:
+      - name: go-math
+        image: mintbomb27/math:v1.0.0 
+        imagePullPolicy: IfNotPresent
+        ports:
+          - containerPort: 8010
+        readinessProbe:          
+          httpGet:
+            path: /
+            port: 8010
+            scheme: HTTP
+          initialDelaySeconds: 5
+          timeoutSeconds: 1    
