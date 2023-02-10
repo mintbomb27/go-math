@@ -21,7 +21,7 @@ jobs:
         with:
           directory: k8s/
           format: sarif
-          output-file: kube-linter.sarif
+          output-file: ../results/kube-linter.sarif
         continue-on-error: true
 
       - name: Upload SARIF report files to GitHub
