@@ -8,5 +8,5 @@ customChecks:
     params:
       key: hpe.com/release
     scope:
-      objectKinds:
-        - DeploymentLike
+      ObjectKinds:
+        - Ingress
