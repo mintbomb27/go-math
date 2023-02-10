@@ -19,7 +19,7 @@ jobs:
         uses: stackrox/kube-linter-action@v1.0.4
         id: kube-linter-action-scan
         with:
-          directory: /
+          directory: k8s/
           format: sarif
           output-file: kube-linter.sarif
         continue-on-error: true
