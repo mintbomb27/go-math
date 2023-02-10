@@ -1,0 +1,12 @@
+checks:
+  doNotAutoAddDefaults: true
+  include:
+    - "required-label-release"
+customChecks:
+  - name: required-label-release
+    template: required-label
+    params:
+      key: hpe.com/release
+    scope:
+      objectKinds:
+        - DeploymentLike
